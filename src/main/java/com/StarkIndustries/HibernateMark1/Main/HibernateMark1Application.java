@@ -60,8 +60,15 @@ public class HibernateMark1Application {
 
 		SessionFactory factory = HibernateUtility.getSessionFactory();
 		Session session = factory.openSession();
+
+		// using get method.
+
 		Student student1 = session.get(Student.class,"2021FHCO042");
 		Student student2 = session.get(Student.class,"2021FHCO056");
+
+		// using load method.
+
+		Student student=session.load(Student.class,"2021FHCO042");
 		System.out.println(student1);
 		System.out.println();
 		System.out.println(student2);
