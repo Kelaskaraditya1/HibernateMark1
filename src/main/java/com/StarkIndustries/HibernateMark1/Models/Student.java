@@ -70,6 +70,17 @@ public class Student {
         this.rollNo = rollNo;
     }
 
+    @Override
+    public String toString() {
+        return "Student{" +
+                "sid='" + sid + '\'' +
+                ", name='" + name + '\'' +
+                ", email='" + email + '\'' +
+                ", rollNo=" + rollNo +
+                ", department='" + department + '\'' +
+                '}';
+    }
+
     public String getDepartment() {
         return department;
     }
